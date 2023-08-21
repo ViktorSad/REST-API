@@ -35,11 +35,11 @@ const searchMovies = async (req, res) => {
     }
 
     const result = await MovieModel.find({ $and: query }); // searching movie with part-title, category, country if it's exist
-    result.length > o
+    result.length > 0
       ? res.status(200).json(result)
       : res.status(200).json({ message: "Nothing was found" });
   } catch (error) {
-    res.status(400).json({ msg: "fault", error: error.message });
+    res.status(400).json({ msg: "fault", error: error });
   }
 };
 

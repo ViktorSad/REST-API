@@ -1,4 +1,4 @@
-ADD your settings: DB_URL and PORT in .env file
+ADD your settings: DB_URL,JWT_KEY and PORT in .env file
 
 // register user: SAMPLE:
 const options = {
